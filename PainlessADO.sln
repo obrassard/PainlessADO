@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOAccelerator", "ADOAccelerator\ADOAccelerator.csproj", "{D568E801-4DAF-4EBB-8FBD-16CD1BF7DD92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PainlessADO", "PainlessADO\PainlessADO.csproj", "{D568E801-4DAF-4EBB-8FBD-16CD1BF7DD92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
