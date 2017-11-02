@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="e1d8fbe8-3a4b-434f-9ef8-92058fbfe221" Title="PainlessADO" Url="html/N_PainlessADO.htm">
-    <HelpTOCNode Id="efa4bb98-9622-41ea-9971-1d93de4c7a3f" Title="SQL Class" Url="html/T_PainlessADO_SQL.htm">
-      <HelpTOCNode Id="cf388d53-8296-4bdf-a751-05162f73d0cd" Title="SQL Constructor " Url="html/Overload_PainlessADO_SQL__ctor.htm">
-        <HelpTOCNode Title="SQL Constructor (String, String, Boolean)" Url="html/M_PainlessADO_SQL__ctor.htm" />
-        <HelpTOCNode Title="SQL Constructor (String, String, String, String)" Url="html/M_PainlessADO_SQL__ctor_1.htm" />
+  <HelpTOCNode Id="4bd44b22-cec5-48a2-a304-50634c9a6133" Title="PainlessADO" Url="html/f4b69393-56bc-6d18-827c-fc4fa135ab9b.htm">
+    <HelpTOCNode Id="70c2f385-f00b-424b-ba30-f006a9d6ef15" Title="SQL Class" Url="html/c3e85a09-7ad3-a4b9-5aa6-5b1e8358d2ca.htm">
+      <HelpTOCNode Id="6d868281-b24b-4166-b145-31a4abb00bfd" Title="SQL Constructor " Url="html/4d4ceda7-9924-ea25-10dd-2397d70ef074.htm">
+        <HelpTOCNode Title="SQL Constructor (String, String, Boolean)" Url="html/ef87509d-265f-8834-561a-84bc00ef609b.htm" />
+        <HelpTOCNode Title="SQL Constructor (String, String, String, String)" Url="html/9bdb0e37-6225-193e-bda4-fbada22f5eb6.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b6cfd46c-5238-47e2-96bd-6824dc49f98e" Title="SQL Methods" Url="html/Methods_T_PainlessADO_SQL.htm">
-        <HelpTOCNode Title="Close Method " Url="html/M_PainlessADO_SQL_Close.htm" />
-        <HelpTOCNode Title="Connect Method " Url="html/M_PainlessADO_SQL_Connect.htm" />
-        <HelpTOCNode Id="d02c48dc-89b7-48aa-8c79-a95bfd683bf0" Title="ExecuteNonQuery Method " Url="html/Overload_PainlessADO_SQL_ExecuteNonQuery.htm">
-          <HelpTOCNode Title="ExecuteNonQuery Method (String)" Url="html/M_PainlessADO_SQL_ExecuteNonQuery.htm" />
-          <HelpTOCNode Title="ExecuteNonQuery Method (String, String[])" Url="html/M_PainlessADO_SQL_ExecuteNonQuery_1.htm" />
+      <HelpTOCNode Id="af22d4b6-0e3c-4340-afa1-55c19e89d9e9" Title="SQL Methods" Url="html/f098137b-8676-1e48-2898-491e6f356d56.htm">
+        <HelpTOCNode Title="Close Method " Url="html/2202195c-e7e8-f5a5-3372-4f7f2361cee2.htm" />
+        <HelpTOCNode Title="Connect Method " Url="html/a74a1f03-70cd-3023-3854-d3da615fa8f6.htm" />
+        <HelpTOCNode Id="a2e8f256-3786-486b-88a6-67188fa78a37" Title="ExecuteNonQuery Method " Url="html/2aec2c3a-9171-92f2-6757-8d41106ea15d.htm">
+          <HelpTOCNode Title="ExecuteNonQuery Method (String)" Url="html/40df09c1-2bab-91f0-3dbc-3304cd3e5273.htm" />
+          <HelpTOCNode Title="ExecuteNonQuery Method (String, String[])" Url="html/f382032c-6965-1bfe-134f-70946a0bc6be.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="46f79c8b-a8aa-41dd-b8cc-af7521f2903e" Title="ExecuteScalar Method " Url="html/Overload_PainlessADO_SQL_ExecuteScalar.htm">
-          <HelpTOCNode Title="ExecuteScalar Method (String)" Url="html/M_PainlessADO_SQL_ExecuteScalar.htm" />
-          <HelpTOCNode Title="ExecuteScalar Method (String, String[])" Url="html/M_PainlessADO_SQL_ExecuteScalar_1.htm" />
+        <HelpTOCNode Id="a82dcf23-5ea2-48fc-b0a6-e1eb5fba1c98" Title="ExecuteScalar Method " Url="html/ef5bacee-a557-17ca-7b91-e449b891f112.htm">
+          <HelpTOCNode Title="ExecuteScalar Method (String)" Url="html/03f6079a-4ceb-6b08-1797-37f5e3c93040.htm" />
+          <HelpTOCNode Title="ExecuteScalar Method (String, String[])" Url="html/07eea0c4-52ff-5379-5122-731e811c1104.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="2c87652e-51f9-4239-a5ba-4b53059d8d25" Title="GetDataReader Method " Url="html/Overload_PainlessADO_SQL_GetDataReader.htm">
-          <HelpTOCNode Title="GetDataReader Method (String)" Url="html/M_PainlessADO_SQL_GetDataReader.htm" />
-          <HelpTOCNode Title="GetDataReader Method (String, String[])" Url="html/M_PainlessADO_SQL_GetDataReader_1.htm" />
+        <HelpTOCNode Id="5dc495f9-7b88-4b89-b338-dad757aba486" Title="GetDataReader Method " Url="html/190a4367-cdfb-3d48-1d15-62d77e979a17.htm">
+          <HelpTOCNode Title="GetDataReader Method (String)" Url="html/067ed60d-2dbe-6e6b-e8bf-294f6828e619.htm" />
+          <HelpTOCNode Title="GetDataReader Method (String, String[])" Url="html/4a7571b0-acb6-5e0b-9919-d7e2185eb0b5.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="f766d88b-4021-4519-8d85-12de02149546" Title="RetrieveAllData Method " Url="html/Overload_PainlessADO_SQL_RetrieveAllData.htm">
-          <HelpTOCNode Title="RetrieveAllData Method (String)" Url="html/M_PainlessADO_SQL_RetrieveAllData.htm" />
-          <HelpTOCNode Title="RetrieveAllData Method (String, String[])" Url="html/M_PainlessADO_SQL_RetrieveAllData_1.htm" />
+        <HelpTOCNode Id="83495caf-335a-4e34-9fc2-501af22d054e" Title="RetrieveAllData Method " Url="html/fea84013-b559-774f-bcf9-98bcbb5301a9.htm">
+          <HelpTOCNode Title="RetrieveAllData Method (String)" Url="html/d94bd276-4151-c734-1c57-317b1b75209a.htm" />
+          <HelpTOCNode Title="RetrieveAllData Method (String, String[])" Url="html/a17d9685-acbf-8787-392d-2a239b2286bc.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="ae3815fd-8618-41ff-b6f5-c08e3563e256" Title="SQL Properties" Url="html/Properties_T_PainlessADO_SQL.htm">
-        <HelpTOCNode Title="dataBase Property " Url="html/P_PainlessADO_SQL_dataBase.htm" />
+      <HelpTOCNode Id="896696e5-602f-46f8-8997-df463bc176e7" Title="SQL Properties" Url="html/590f0833-6b59-de33-2067-4b16cf747c04.htm">
+        <HelpTOCNode Title="dataBase Property " Url="html/15a26fd1-a2b1-7a59-dac0-8a1ecbd3a7c4.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>

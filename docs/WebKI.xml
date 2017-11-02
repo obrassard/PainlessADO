@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
-  <HelpKINode Title="Close method" Url="html/M_PainlessADO_SQL_Close.htm" />
-  <HelpKINode Title="Connect method" Url="html/M_PainlessADO_SQL_Connect.htm" />
-  <HelpKINode Title="dataBase property" Url="html/P_PainlessADO_SQL_dataBase.htm" />
-  <HelpKINode Title="ExecuteNonQuery method" Url="html/Overload_PainlessADO_SQL_ExecuteNonQuery.htm" />
-  <HelpKINode Title="ExecuteScalar method" Url="html/Overload_PainlessADO_SQL_ExecuteScalar.htm" />
-  <HelpKINode Title="GetDataReader method" Url="html/Overload_PainlessADO_SQL_GetDataReader.htm" />
-  <HelpKINode Title="PainlessADO namespace" Url="html/N_PainlessADO.htm" />
-  <HelpKINode Title="PainlessADO.SQL class" Url="html/T_PainlessADO_SQL.htm" />
-  <HelpKINode Title="RetrieveAllData method" Url="html/Overload_PainlessADO_SQL_RetrieveAllData.htm" />
+  <HelpKINode Title="Close method" Url="html/2202195c-e7e8-f5a5-3372-4f7f2361cee2.htm" />
+  <HelpKINode Title="Connect method" Url="html/a74a1f03-70cd-3023-3854-d3da615fa8f6.htm" />
+  <HelpKINode Title="dataBase property" Url="html/15a26fd1-a2b1-7a59-dac0-8a1ecbd3a7c4.htm" />
+  <HelpKINode Title="ExecuteNonQuery method" Url="html/2aec2c3a-9171-92f2-6757-8d41106ea15d.htm" />
+  <HelpKINode Title="ExecuteScalar method" Url="html/ef5bacee-a557-17ca-7b91-e449b891f112.htm" />
+  <HelpKINode Title="GetDataReader method" Url="html/190a4367-cdfb-3d48-1d15-62d77e979a17.htm" />
+  <HelpKINode Title="PainlessADO namespace" Url="html/f4b69393-56bc-6d18-827c-fc4fa135ab9b.htm" />
+  <HelpKINode Title="PainlessADO.SQL class" Url="html/c3e85a09-7ad3-a4b9-5aa6-5b1e8358d2ca.htm" />
+  <HelpKINode Title="RetrieveAllData method" Url="html/fea84013-b559-774f-bcf9-98bcbb5301a9.htm" />
   <HelpKINode Title="SQL class">
-    <HelpKINode Title="SQL Class" Url="html/T_PainlessADO_SQL.htm" />
-    <HelpKINode Title="about SQL class" Url="html/T_PainlessADO_SQL.htm" />
-    <HelpKINode Title="constructor" Url="html/Overload_PainlessADO_SQL__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_PainlessADO_SQL.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_PainlessADO_SQL.htm" />
+    <HelpKINode Title="SQL Class" Url="html/c3e85a09-7ad3-a4b9-5aa6-5b1e8358d2ca.htm" />
+    <HelpKINode Title="about SQL class" Url="html/c3e85a09-7ad3-a4b9-5aa6-5b1e8358d2ca.htm" />
+    <HelpKINode Title="constructor" Url="html/4d4ceda7-9924-ea25-10dd-2397d70ef074.htm" />
+    <HelpKINode Title="methods" Url="html/f098137b-8676-1e48-2898-491e6f356d56.htm" />
+    <HelpKINode Title="properties" Url="html/590f0833-6b59-de33-2067-4b16cf747c04.htm" />
   </HelpKINode>
-  <HelpKINode Title="SQL.Close method" Url="html/M_PainlessADO_SQL_Close.htm" />
-  <HelpKINode Title="SQL.Connect method" Url="html/M_PainlessADO_SQL_Connect.htm" />
-  <HelpKINode Title="SQL.dataBase property" Url="html/P_PainlessADO_SQL_dataBase.htm" />
-  <HelpKINode Title="SQL.ExecuteNonQuery method" Url="html/Overload_PainlessADO_SQL_ExecuteNonQuery.htm" />
-  <HelpKINode Title="SQL.ExecuteScalar method" Url="html/Overload_PainlessADO_SQL_ExecuteScalar.htm" />
-  <HelpKINode Title="SQL.GetDataReader method" Url="html/Overload_PainlessADO_SQL_GetDataReader.htm" />
-  <HelpKINode Title="SQL.RetrieveAllData method" Url="html/Overload_PainlessADO_SQL_RetrieveAllData.htm" />
-  <HelpKINode Title="SQL.SQL constructor" Url="html/Overload_PainlessADO_SQL__ctor.htm" />
+  <HelpKINode Title="SQL.Close method" Url="html/2202195c-e7e8-f5a5-3372-4f7f2361cee2.htm" />
+  <HelpKINode Title="SQL.Connect method" Url="html/a74a1f03-70cd-3023-3854-d3da615fa8f6.htm" />
+  <HelpKINode Title="SQL.dataBase property" Url="html/15a26fd1-a2b1-7a59-dac0-8a1ecbd3a7c4.htm" />
+  <HelpKINode Title="SQL.ExecuteNonQuery method" Url="html/2aec2c3a-9171-92f2-6757-8d41106ea15d.htm" />
+  <HelpKINode Title="SQL.ExecuteScalar method" Url="html/ef5bacee-a557-17ca-7b91-e449b891f112.htm" />
+  <HelpKINode Title="SQL.GetDataReader method" Url="html/190a4367-cdfb-3d48-1d15-62d77e979a17.htm" />
+  <HelpKINode Title="SQL.RetrieveAllData method" Url="html/fea84013-b559-774f-bcf9-98bcbb5301a9.htm" />
+  <HelpKINode Title="SQL.SQL constructor" Url="html/4d4ceda7-9924-ea25-10dd-2397d70ef074.htm" />
 </HelpKI>
