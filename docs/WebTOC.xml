@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="e1d8fbe8-3a4b-434f-9ef8-92058fbfe221" Title="PainlessADO" Url="html/N_PainlessADO.htm">
+    <HelpTOCNode Id="efa4bb98-9622-41ea-9971-1d93de4c7a3f" Title="SQL Class" Url="html/T_PainlessADO_SQL.htm">
+      <HelpTOCNode Id="cf388d53-8296-4bdf-a751-05162f73d0cd" Title="SQL Constructor " Url="html/Overload_PainlessADO_SQL__ctor.htm">
+        <HelpTOCNode Title="SQL Constructor (String, String, Boolean)" Url="html/M_PainlessADO_SQL__ctor.htm" />
+        <HelpTOCNode Title="SQL Constructor (String, String, String, String)" Url="html/M_PainlessADO_SQL__ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b6cfd46c-5238-47e2-96bd-6824dc49f98e" Title="SQL Methods" Url="html/Methods_T_PainlessADO_SQL.htm">
+        <HelpTOCNode Title="Close Method " Url="html/M_PainlessADO_SQL_Close.htm" />
+        <HelpTOCNode Title="Connect Method " Url="html/M_PainlessADO_SQL_Connect.htm" />
+        <HelpTOCNode Id="d02c48dc-89b7-48aa-8c79-a95bfd683bf0" Title="ExecuteNonQuery Method " Url="html/Overload_PainlessADO_SQL_ExecuteNonQuery.htm">
+          <HelpTOCNode Title="ExecuteNonQuery Method (String)" Url="html/M_PainlessADO_SQL_ExecuteNonQuery.htm" />
+          <HelpTOCNode Title="ExecuteNonQuery Method (String, String[])" Url="html/M_PainlessADO_SQL_ExecuteNonQuery_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="46f79c8b-a8aa-41dd-b8cc-af7521f2903e" Title="ExecuteScalar Method " Url="html/Overload_PainlessADO_SQL_ExecuteScalar.htm">
+          <HelpTOCNode Title="ExecuteScalar Method (String)" Url="html/M_PainlessADO_SQL_ExecuteScalar.htm" />
+          <HelpTOCNode Title="ExecuteScalar Method (String, String[])" Url="html/M_PainlessADO_SQL_ExecuteScalar_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="2c87652e-51f9-4239-a5ba-4b53059d8d25" Title="GetDataReader Method " Url="html/Overload_PainlessADO_SQL_GetDataReader.htm">
+          <HelpTOCNode Title="GetDataReader Method (String)" Url="html/M_PainlessADO_SQL_GetDataReader.htm" />
+          <HelpTOCNode Title="GetDataReader Method (String, String[])" Url="html/M_PainlessADO_SQL_GetDataReader_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="f766d88b-4021-4519-8d85-12de02149546" Title="RetrieveAllData Method " Url="html/Overload_PainlessADO_SQL_RetrieveAllData.htm">
+          <HelpTOCNode Title="RetrieveAllData Method (String)" Url="html/M_PainlessADO_SQL_RetrieveAllData.htm" />
+          <HelpTOCNode Title="RetrieveAllData Method (String, String[])" Url="html/M_PainlessADO_SQL_RetrieveAllData_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ae3815fd-8618-41ff-b6f5-c08e3563e256" Title="SQL Properties" Url="html/Properties_T_PainlessADO_SQL.htm">
+        <HelpTOCNode Title="dataBase Property " Url="html/P_PainlessADO_SQL_dataBase.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

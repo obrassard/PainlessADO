@@ -14,6 +14,9 @@ namespace PainlessADO
         private const string ER_NOT_OPENED_CONNECTION = "The connection must be opened to perform this action";
         #endregion
 
+        /// <summary>
+        /// Return the data base's SqlConnection object
+        /// </summary>
         #region Properties
         public SqlConnection dataBase { get; }
         #endregion
