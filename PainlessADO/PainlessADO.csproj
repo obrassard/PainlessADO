@@ -7,8 +7,8 @@
     <ProjectGuid>{D568E801-4DAF-4EBB-8FBD-16CD1BF7DD92}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ADOAccelerator</RootNamespace>
-    <AssemblyName>ADOAccelerator</AssemblyName>
+    <RootNamespace>PainlessADO</RootNamespace>
+    <AssemblyName>PainlessADO</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
