@@ -2,10 +2,13 @@
 using System.Data;
 using System.Data.SqlClient;
 
+/// <summary>
+///  Wrapper for C#'s ActiveX Data Objects Library (ADO.NET) which simplify the use of basics SQL functions.
+/// </summary>
 namespace PainlessADO
 {
     /// <summary>
-    /// Wrapper for C#'s ActiveX Data Objects Library (ADO.NET) which simplify the use of basics SQL functions.
+    ///  Wrapper for C#'s ActiveX Data Objects Library (ADO.NET) which simplify the use of basics SQL functions.
     /// </summary>
     public class SQL
     {
@@ -47,7 +50,7 @@ namespace PainlessADO
         //=================================================================================================
 
         /// <summary>
-        /// Create new sql connection and open this connection, using Itegrated Security
+        /// Create new sql connection and open this connection, using Integrated Security
         /// </summary>
         /// <param name="serverSource">Server's location</param>
         /// <param name="dataBaseName">Data base's name</param>
@@ -108,7 +111,7 @@ namespace PainlessADO
         /// Sends the query to the Connection and builds a SqlDataReader. (ExecuteReader)
         /// </summary>
         /// <param name="query">sql query</param>
-        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first folowed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
+        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first followed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
         /// <returns>SqlDataReader</returns>
         public SqlDataReader GetDataReader(string query, params string[] sqlParameters)
         {
@@ -145,7 +148,7 @@ namespace PainlessADO
         /// Get all data from query in a DataTable 
         /// </summary>
         /// <param name="query">sql query</param>
-        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first folowed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
+        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first followed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
         /// <returns>DataTable</returns>
         public DataTable RetrieveAllData(string query, params string[] sqlParameters)
         {
@@ -187,7 +190,7 @@ namespace PainlessADO
         /// Additional columns or rows are ignored 
         /// </summary>
         /// <param name="query">sql query</param>
-        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first folowed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
+        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first followed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
         /// <returns>A castable object</returns>
         public object ExecuteScalar(string query, params string[] sqlParameters)
         {
@@ -226,7 +229,7 @@ namespace PainlessADO
         /// Executes a Transact-SQL statement against the connection and returns the number of rows affected
         /// </summary>
         /// <param name="query">sql query</param>
-        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first folowed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
+        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first followed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
         /// <returns>The number of rows affected</returns>
         public int ExecuteNonQuery(string query, params string[] sqlParameters)
         {
@@ -247,7 +250,7 @@ namespace PainlessADO
             SqlCommand command = DataBase.CreateCommand();
             command.CommandText = query;
 
-            if (sqlParameters.Length % 2 != 0) throw new ArgumentException("The numbers of parameters must be even. Write every parametters, folowed by their value");
+            if (sqlParameters.Length % 2 != 0) throw new ArgumentException("The numbers of parameters must be even. Write every parametters, followed by their value");
 
             for (int pairIndex = 0; pairIndex < sqlParameters.Length; pairIndex += 2)
             {
