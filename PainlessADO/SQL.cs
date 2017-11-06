@@ -18,7 +18,12 @@ namespace PainlessADO
         /// Return the data base's SqlConnection object
         /// </summary>
         #region Properties
-        public SqlConnection dataBase { get; }
+        public SqlConnection DataBase { get; }
+
+        /// <summary>
+        /// Return the data base's connection state
+        /// </summary>
+        public ConnectionState State { get { return DataBase.State; } }
         #endregion
 
         #region Constructors
@@ -35,7 +40,7 @@ namespace PainlessADO
         {
 
             string connectionString = "Data Source=" + serverSource + ";Initial Catalog=" + dataBaseName + "; User ID=" + userID + "; Pwd=" + password;
-            dataBase = new SqlConnection(connectionString);
+            DataBase = new SqlConnection(connectionString);
             Connect();
         }
 
@@ -46,11 +51,10 @@ namespace PainlessADO
         /// </summary>
         /// <param name="serverSource">Server's location</param>
         /// <param name="dataBaseName">Data base's name</param>
-        /// <param name="useIntegratedSecurity">Shoul'd be true to use Integrated Security</param>
-        public SQL(string serverSource, string dataBaseName, bool useIntegratedSecurity)
+        public SQL(string serverSource, string dataBaseName)
         {
-            string connectionString = "Data Source=" + serverSource + ";Initial Catalog=" + dataBaseName + ";Integrated Security=" + useIntegratedSecurity;
-            dataBase = new SqlConnection(connectionString);
+            string connectionString = "Data Source=" + serverSource + ";Initial Catalog=" + dataBaseName + ";Integrated Security=true";
+            DataBase = new SqlConnection(connectionString);
             Connect();
         }
 
@@ -66,7 +70,7 @@ namespace PainlessADO
         /// </summary>
         public void Close()
         {
-            dataBase.Close();
+            DataBase.Close();
         }
 
         //=================================================================================================
@@ -76,7 +80,7 @@ namespace PainlessADO
         /// </summary>
         public void Connect()
         {
-            dataBase.Open();
+            DataBase.Open();
         }
 
         //=================================================================================================
@@ -88,9 +92,9 @@ namespace PainlessADO
         /// <returns>SqlDataReader</returns>
         public SqlDataReader GetDataReader(string query)
         {
-            if (dataBase.State == ConnectionState.Open)
+            if (DataBase.State == ConnectionState.Open)
             {
-                SqlCommand command = dataBase.CreateCommand();
+                SqlCommand command = DataBase.CreateCommand();
                 command.CommandText = query;
                 SqlDataReader reader = command.ExecuteReader();
                 return reader;
@@ -104,11 +108,11 @@ namespace PainlessADO
         /// Sends the query to the Connection and builds a SqlDataReader. (ExecuteReader)
         /// </summary>
         /// <param name="query">sql query</param>
-        /// <param name="sqlParameters">One to many string combining a parameter name and a value (Example: "ParamName:Value")</param>
+        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first folowed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
         /// <returns>SqlDataReader</returns>
         public SqlDataReader GetDataReader(string query, params string[] sqlParameters)
         {
-            if (dataBase.State == ConnectionState.Open)
+            if (DataBase.State == ConnectionState.Open)
             {
                 SqlCommand command = CreateCommandWthParams(query, sqlParameters);            
                 SqlDataReader reader = command.ExecuteReader();
@@ -134,14 +138,14 @@ namespace PainlessADO
 
             return table;
         }
-        
+
         //=================================================================================================
-        
+
         /// <summary>
         /// Get all data from query in a DataTable 
         /// </summary>
         /// <param name="query">sql query</param>
-        /// <param name="sqlParameters">One to many string combining a parameter name and a value (Example: "ParamName:Value")</param>
+        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first folowed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
         /// <returns>DataTable</returns>
         public DataTable RetrieveAllData(string query, params string[] sqlParameters)
         {
@@ -164,10 +168,10 @@ namespace PainlessADO
         /// <returns>A castable object</returns>
         public object ExecuteScalar(string query)
         {
-            if (dataBase.State == ConnectionState.Open)
+            if (DataBase.State == ConnectionState.Open)
             {
 
-                SqlCommand commande = dataBase.CreateCommand();
+                SqlCommand commande = DataBase.CreateCommand();
                 commande.CommandText = query;
 
                 return commande.ExecuteScalar();
@@ -183,11 +187,11 @@ namespace PainlessADO
         /// Additional columns or rows are ignored 
         /// </summary>
         /// <param name="query">sql query</param>
-        /// <param name="sqlParameters">One to many string combining a parameter name and a value (Example: "ParamName:Value")</param>
+        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first folowed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
         /// <returns>A castable object</returns>
         public object ExecuteScalar(string query, params string[] sqlParameters)
         {
-            if (dataBase.State == ConnectionState.Open)
+            if (DataBase.State == ConnectionState.Open)
             {
                 SqlCommand command = CreateCommandWthParams(query, sqlParameters);
                 return command.ExecuteScalar();
@@ -204,10 +208,10 @@ namespace PainlessADO
         /// <returns>The number of rows affected</returns>
         public int ExecuteNonQuery(string query)
         {
-            if (dataBase.State == ConnectionState.Open)
+            if (DataBase.State == ConnectionState.Open)
             {
 
-                SqlCommand commande = dataBase.CreateCommand();
+                SqlCommand commande = DataBase.CreateCommand();
                 commande.CommandText = query;
 
                 return commande.ExecuteNonQuery();
@@ -222,11 +226,11 @@ namespace PainlessADO
         /// Executes a Transact-SQL statement against the connection and returns the number of rows affected
         /// </summary>
         /// <param name="query">sql query</param>
-        /// <param name="sqlParameters">One to many string combining a parameter name and a value (Example: "ParamName:Value")</param>
+        /// <param name="sqlParameters">One to many pairs of strings, parameter's name first folowed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
         /// <returns>The number of rows affected</returns>
         public int ExecuteNonQuery(string query, params string[] sqlParameters)
         {
-            if (dataBase.State == ConnectionState.Open)
+            if (DataBase.State == ConnectionState.Open)
             {
                 SqlCommand commande = CreateCommandWthParams(query, sqlParameters);
                 return commande.ExecuteNonQuery();
@@ -240,19 +244,20 @@ namespace PainlessADO
         #region Private Methods
         private SqlCommand CreateCommandWthParams(string query, string[] sqlParameters)
         {
-            SqlCommand command = dataBase.CreateCommand();
+            SqlCommand command = DataBase.CreateCommand();
             command.CommandText = query;
 
-            foreach (string combinedparam in sqlParameters)
+            if (sqlParameters.Length % 2 != 0) throw new ArgumentException("The numbers of parameters must be even. Write every parametters, folowed by their value");
+
+            for (int pairIndex = 0; pairIndex < sqlParameters.Length; pairIndex += 2)
             {
-                string[] separatedParams = combinedparam.Split(':');
-                if (separatedParams.Length != 2) throw new ArgumentException("Parameter's syntax is incorect... Use \"ParamName:Value\"");
-                string name = separatedParams[0];
-                string value = separatedParams[1];
+                string name = sqlParameters[pairIndex];
+                string value = sqlParameters[pairIndex+1];
 
                 SqlParameter param = new SqlParameter(name, value);
                 command.Parameters.Add(param);
             }
+
 
             return command;
         }
