@@ -2,7 +2,7 @@
 
 ![version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg?style=for-the-badge)
 ![Language](https://img.shields.io/badge/Language-C%20Sharp-5b0dc3.svg?style=for-the-badge)
-#### [_Read the complete documentation on GitBook_](https://painlessado.obrassard.me)
+#### [_Read the complete documentation on GitBook_](https://painlessado.obrassard.ca)
 
 
 
