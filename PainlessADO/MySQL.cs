@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace PainlessADO
 {
     /// <summary>
-    ///  Wrapper for C#'s ActiveX Data Objects Library (ADO.NET) which simplify the use of basics SQL functions.
-    ///  This class can be use to connect to a T-SQL Database
+    ///  Wrapper for C#'s ActiveX Data Objects Library (ADO.NET) which simplify the use of basics MySQL functions.
+    ///  This class can be use to connect to a MySql Database 
+    ///  Tis class require the MySql.Data package: https://www.nuget.org/packages/MySql.Data/
     /// </summary>
-    public class SQL
+    public class MySQL
     {
 
         #region Error Messages
@@ -20,7 +22,7 @@ namespace PainlessADO
         /// <summary>
         /// Return the data base's SqlConnection object
         /// </summary>
-        public SqlConnection DataBase { get; }
+        public MySqlConnection DataBase { get; }
 
         /// <summary>
         /// Return the data base's connection state
@@ -34,32 +36,18 @@ namespace PainlessADO
         /// <summary>
         /// Create new sql connection and open this connection with user name and password
         /// </summary>
-        /// <param name="serverSource">Server's location</param>
+        /// <param name="serverAddress">Server's location</param>
         /// <param name="dataBaseName">Data base's name</param>
         /// <param name="userID">User's login id</param>
         /// <param name="password">User's password</param>
-        public SQL(string serverSource, string dataBaseName, string userID, string password )
+        public MySQL(string serverAddress, string dataBaseName, string userID, string password )
         {
-
-            string connectionString = "Data Source=" + serverSource + ";Initial Catalog=" + dataBaseName + "; User ID=" + userID + "; Pwd=" + password;
-            DataBase = new SqlConnection(connectionString);
+            string connectionString = "server = "+serverAddress+"; uid = "+userID+"; pwd = "+password+"; database = "+dataBaseName;
+            DataBase = new MySqlConnection(connectionString);
             Connect();
         }
 
-        //=================================================================================================
-
-        /// <summary>
-        /// Create new sql connection and open this connection, using Integrated Security
-        /// </summary>
-        /// <param name="serverSource">Server's location</param>
-        /// <param name="dataBaseName">Data base's name</param>
-        public SQL(string serverSource, string dataBaseName)
-        {
-            string connectionString = "Data Source=" + serverSource + ";Initial Catalog=" + dataBaseName + ";Integrated Security=true";
-            DataBase = new SqlConnection(connectionString);
-            Connect();
-        }
-
+ 
         //=================================================================================================
 
         #endregion
@@ -92,13 +80,13 @@ namespace PainlessADO
         /// </summary>
         /// <param name="query">sql query</param>
         /// <returns>SqlDataReader</returns>
-        public SqlDataReader GetDataReader(string query)
+        public MySqlDataReader GetDataReader(string query)
         {
             if (DataBase.State == ConnectionState.Open)
             {
-                SqlCommand command = DataBase.CreateCommand();
+                MySqlCommand command = DataBase.CreateCommand();
                 command.CommandText = query;
-                SqlDataReader reader = command.ExecuteReader();
+                MySqlDataReader reader = command.ExecuteReader();
                 return reader;
             }
             else throw new InvalidOperationException(ER_NOT_OPENED_CONNECTION);
@@ -112,12 +100,12 @@ namespace PainlessADO
         /// <param name="query">sql query</param>
         /// <param name="sqlParameters">One to many pairs of strings, parameter's name first followed by the value. (E.g.: "param1", "value1", "param2", "value2"...)</param>
         /// <returns>SqlDataReader</returns>
-        public SqlDataReader GetDataReader(string query, params string[] sqlParameters)
+        public MySqlDataReader GetDataReader(string query, params string[] sqlParameters)
         {
             if (DataBase.State == ConnectionState.Open)
             {
-                SqlCommand command = CreateCommandWthParams(query, sqlParameters);            
-                SqlDataReader reader = command.ExecuteReader();
+                MySqlCommand command = CreateCommandWthParams(query, sqlParameters);
+                MySqlDataReader reader = command.ExecuteReader();
                 return reader;
 
             }
@@ -133,7 +121,7 @@ namespace PainlessADO
         /// <returns>DataTable</returns>
         public DataTable RetrieveAllData(string query)
         {
-            SqlDataReader reader = GetDataReader(query);
+            MySqlDataReader reader = GetDataReader(query);
             DataTable table = new DataTable();
             table.Load(reader);
             reader.Close();
@@ -152,7 +140,7 @@ namespace PainlessADO
         public DataTable RetrieveAllData(string query, params string[] sqlParameters)
         {
             
-            SqlDataReader reader = GetDataReader(query, sqlParameters);
+            MySqlDataReader reader = GetDataReader(query, sqlParameters);
             DataTable table = new DataTable();
             table.Load(reader);
             reader.Close();
@@ -173,7 +161,7 @@ namespace PainlessADO
             if (DataBase.State == ConnectionState.Open)
             {
 
-                SqlCommand commande = DataBase.CreateCommand();
+                MySqlCommand commande = DataBase.CreateCommand();
                 commande.CommandText = query;
 
                 return commande.ExecuteScalar();
@@ -195,7 +183,7 @@ namespace PainlessADO
         {
             if (DataBase.State == ConnectionState.Open)
             {
-                SqlCommand command = CreateCommandWthParams(query, sqlParameters);
+                MySqlCommand command = CreateCommandWthParams(query, sqlParameters);
                 return command.ExecuteScalar();
             }
             else throw new InvalidOperationException(ER_NOT_OPENED_CONNECTION);
@@ -213,7 +201,7 @@ namespace PainlessADO
             if (DataBase.State == ConnectionState.Open)
             {
 
-                SqlCommand commande = DataBase.CreateCommand();
+                MySqlCommand commande = DataBase.CreateCommand();
                 commande.CommandText = query;
 
                 return commande.ExecuteNonQuery();
@@ -234,7 +222,7 @@ namespace PainlessADO
         {
             if (DataBase.State == ConnectionState.Open)
             {
-                SqlCommand commande = CreateCommandWthParams(query, sqlParameters);
+                MySqlCommand commande = CreateCommandWthParams(query, sqlParameters);
                 return commande.ExecuteNonQuery();
             }
             else throw new InvalidOperationException(ER_NOT_OPENED_CONNECTION);
@@ -244,9 +232,9 @@ namespace PainlessADO
         #endregion
 
         #region Private Methods
-        private SqlCommand CreateCommandWthParams(string query, string[] sqlParameters)
+        private MySqlCommand CreateCommandWthParams(string query, string[] sqlParameters)
         {
-            SqlCommand command = DataBase.CreateCommand();
+            MySqlCommand command = DataBase.CreateCommand();
             command.CommandText = query;
 
             if (sqlParameters.Length % 2 != 0) throw new ArgumentException("The numbers of parameters must be even. Write every parametters, followed by their value");
@@ -256,10 +244,9 @@ namespace PainlessADO
                 string name = sqlParameters[pairIndex];
                 string value = sqlParameters[pairIndex+1];
 
-                SqlParameter param = new SqlParameter(name, value);
+                MySqlParameter param = new MySqlParameter(name, value);
                 command.Parameters.Add(param);
             }
-
 
             return command;
         }
