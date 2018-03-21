@@ -1,7 +1,7 @@
 # Painless ActiveX Data Objects
 
 ![version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg?style=for-the-badge)  
-![Language](https://img.shields.io/badge/Language-C Sharp-5b0dc3.svg?style=for-the-badge)
+![](https://img.shields.io/badge/Language-CSharp-5b0dc3.svg?style=for-the-badge)
 
 #### [_Read the complete documentation on GitBook_](https://painlessado.obrassard.ca)
 
@@ -13,7 +13,7 @@ PainlessADO includes the **SQL** class, which allows you to quickly connect to a
 public class SQL
 ```
 
-Version 1.3 also includes **support for MySQL** databases which provides the same methods than the SQL class, only they have been adapted to MySQL. The usage of the **MySQL** class is identical to the **SQL** class which is explained in this document.
+Version 1.3 also includes **support for MySQL** databases which provides the same methods than the SQL class, only they have been adapted to MySQL.  Using this class is  therefore exactly the same as the **SQL **class which is explained in this document.
 
 ```csharp
 public class MySQL
