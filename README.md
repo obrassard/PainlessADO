@@ -13,7 +13,7 @@ PainlessADO includes the **SQL** class, which allows you to quickly connect to a
 public class SQL
 ```
 
-Version 1.3 also includes **support for MySQL** databases which provides the same methods than the SQL class, only they have been adapted to MySQL.  Using this class is  therefore exactly the same as the **SQL **class which is explained in this document.
+Version 1.3 also includes **support for MySQL** databases which provides the same methods than the SQL class, only they have been adapted to MySQL.  Using this class is  therefore exactly the same as the **SQL** class which is explained in this document.
 
 ```csharp
 public class MySQL
