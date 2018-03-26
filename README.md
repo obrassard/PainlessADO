@@ -5,15 +5,15 @@
 
 #### [_Read the complete documentation on GitBook_](https://painlessado.obrassard.ca)
 
-### PainlessADO is a wrapper for C\#'s ActiveX Data Objects Library \(ADO.NET\) which simplify the use of basics SQL functions.
+### PainlessADO is a wrapper for C\#'s ActiveX Data Objects Library \(ADO.NET\) which simplifies the use of basic SQL functions.
 
-PainlessADO includes the **SQL** class, which allows you to quickly connect to a microsoft sql database and execute queries with or without parameters in your C\# code :
+PainlessADO includes the **SQL** class, which allows you to quickly connect to a Microsoft SQL database and execute queries with or without parameters in your C\# code :
 
 ```csharp
 public class SQL
 ```
 
-Version 1.3 also includes **support for MySQL** databases which provides the same methods than the SQL class, only they have been adapted to MySQL.  Using this class is  therefore exactly the same as the **SQL** class which is explained in this document.
+Version 1.3 also includes **support for MySQL** databases which provides the same methods as the SQL class, only they have been adapted to MySQL.  Using this class is therefore exactly the same as the **SQL** class which is detailed in this document.
 
 ```csharp
 public class MySQL
