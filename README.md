@@ -1,6 +1,6 @@
 # Painless ActiveX Data Objects
 
-![version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg?style=for-the-badge)  
+![version](https://img.shields.io/badge/Version-1.3.0-brightgreen.svg?style=for-the-badge)  
 ![](https://img.shields.io/badge/Language-CSharp-5b0dc3.svg?style=for-the-badge)
 
 #### [_Read the complete documentation on GitBook_](https://painlessado.obrassard.ca)
